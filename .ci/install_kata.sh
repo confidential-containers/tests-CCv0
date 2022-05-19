@@ -24,6 +24,7 @@ echo "Install Kata Containers Kernel"
 "${cidir}/install_kata_kernel.sh" "${tag}"
 
 install_qemu(){
+	export FORCE_BUILD_QEMU=true
 	echo "Installing qemu"
 	if [ "$experimental_qemu" == "true" ]; then
 		echo "Install experimental Qemu"
